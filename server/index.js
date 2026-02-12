@@ -12,7 +12,7 @@ const app = express();
 // 🔹 Middleware
 app.use(
   cors({
-    origin: /^http:\/\/localhost:\d+$/, // allow any localhost port
+    origin: process.env.VITE_PORT, // allow any localhost port
     methods: ["GET", "POST", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
